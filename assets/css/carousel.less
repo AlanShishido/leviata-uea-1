@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Poiret+One&display=swap');
+
+// font-family: 'Comic Neue', cursive;
+// font-family: 'Poiret One', cursive;
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+    width: 100%;
+    // height: calc(50vh - 100px);
+    position: relative;
+    max-height: 70vh;
+    overflow: hidden;
+    // margin: auto;
+}
+
+.carousel-content {
+  background: rgba(0, 0, 0, .25);
+  height: 70vh;
+  position: absolute; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 0;
+
+  .titles {
+    width: 100%;
+    h1 {
+      font-size: 100px;
+      // text-transform: uppercase;
+      font-family: 'Comic Neue', cursive;
+      color: white;
+      text-shadow: 3px 3px 10px  white;
+      text-align: center;
+      span {
+          color: lightblue;
+          text-shadow: none;
+          font-family: 'Kaushan Script', cursive;
+          font-size: 40px;
+      }
+    }
+  }
+}
+
+.mySlides {
+  display: none;
+}
+
+.more {
+  z-index: 99!important;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 30px 70px;
+  
+  span {
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 40px;
+  }
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

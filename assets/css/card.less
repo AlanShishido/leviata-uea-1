@@ -1,0 +1,24 @@
+#cards {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 70%;
+    .card {
+        position: relative;
+        cursor: pointer;
+        width: 23%;
+        padding: 25px;
+        border-radius: 5px;
+        img {
+            border-radius: 10px;
+        }
+        &:hover {
+            .link {
+                opacity: 1;
+                transition: .5s;
+            }
+        }
+    }
+}

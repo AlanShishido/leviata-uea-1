@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Leviata UEA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/imgs/logo.jpg">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <link rel="stylesheet/less" type="text/css" href="./assets/css/style.less" />
+  <link rel="stylesheet/less" type="text/css" href="./assets/css/card.less" />
+  <link rel="stylesheet/less" type="text/css" href="./assets/css/carousel.less" />
+
+</head>
+    <body id="body" onload="fetchData(); label1()">
+        <div id="page">
+
+            <header>
+                <div class="logo">
+                    <img src="./assets/imgs/logo.jpg" alt="logo" id="logo">
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li class="menu-item">home</li>
+                        <li class="menu-item">sobre</li>
+                        <li class="menu-item">fotos</li>
+                    </ul>                    
+                </nav>
+            </header>
+            <main>
+                <div class="jumbo">
+                    <div class="carousel">
+                        <div class="slideshow-container">
+
+                            <div class="mySlides fade">
+                                <img src="./assets/imgs/banner.jpg" alt="" width="100%">
+                                <div class="carousel-content">
+                                    <div class="titles">
+                                        <h1>leviatã</h1>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                            <div class="mySlides fade">
+                                <img src="./assets/imgs/team1.jpg" alt="" width="100%">
+                                <div class="carousel-content">
+                                    <div class="titles">
+                                        <h1>leviatã</h1>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                            <div class="mySlides fade">
+                                <img src="./assets/imgs/team2.jpg" alt="" width="100%">
+                                <div class="carousel-content">
+                                    <div class="titles">
+                                        <h1>leviatã</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="more">
+                                <div class="arrow">
+                                    <span title="anterior" onclick="plusSlides(-1)"> <i class="fas fa-arrow-left"></i> </span>
+                                    <span title="proximo" onclick="plusSlides(1)"> <i class="fas fa-arrow-right"></i> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about" id="about">
+                    <div class="reta">
+                        <div class="inclinacao"></div>
+                    </div>
+                    <div class="about-txt">
+                        <h2>
+                            Sobre nós
+                        </h2>
+                        <p>
+                            Construir uma embarcação exclusivamente movida à energia solar, com sistemas de obtenção e utilização de energias cada vez mais eficientes com o intuito de apresentar para o Brasil o potencial e a capacidade dos alunos e profissionais da Região Norte. Além de promover o estímulo, dentro da região, à utilização de energias renováveis e conscientizar tanto outros grupos de pesquisa quanto a população sobre a capacidade de utilização atual da energia solar. Promovendo, assim, o aumento de iniciativas semelhantes para o desenvolvimento de tais tecnologias.
+                        </p>
+                    </div>
+                    <div class="about-icons">
+                        <img src="./assets/imgs/logo.jpg" width="60%" alt="logo">
+                    </div>
+                </div>
+                <div class="reta">
+                    <div class="inclinacao"></div>
+                </div>
+                <div class="works">
+                    <h2>Publicações</h2>
+                    <div id="cards"></div>
+                </div>
+
+                <div class="about" style="align-items: flex-start;">
+                    <div class="reta">
+                        <div class="inclinacao"></div>
+                    </div>
+                    <div class="about-labels">
+                        <div class="label" onclick="changeContent(0)">
+                            <i class="fas fa-medal"></i>
+                            <h3>Conquistas</h3>
+                        </div>
+                        <div class="label" onclick="changeContent(1)">
+                            <i class="fas fa-ship"></i>
+                            <h3>Motivações</h3>
+                        </div>
+                        <div class="label" onclick="changeContent(2)">
+                            <i class="fas fa-trophy"></i>
+                            <h3>Competições</h3>
+                        </div>
+                    </div>
+                    <div id="main-icon" class="main-icon"></div>
+                </div>
+                <div class="reta">
+                    <div class="inclinacao"></div>
+                </div>
+
+                <div class="something">
+
+                </div>
+
+            </main>
+            <footer>
+                <div class="reta">
+                    <div class="inclinacao"></div>
+                </div>
+            </footer>
+
+        </div>
+        <script src="./assets/js/fetch.js"></script>
+        <script src="./assets/js/content.js"></script>
+        <script src="./assets/js/carousel.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js" ></script>
+    </body>
+</html>

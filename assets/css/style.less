@@ -1,0 +1,235 @@
+@header-height: 100px;
+@footer-height: 60px;
+@main-height: calc(100vh - @header-height - @footer-height);
+
+@primary: #080031;
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.reta {
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    .inclinacao {
+        position: absolute;
+        top: -73px;
+        height: 137px;
+        width: 100%;
+        background: #080031;
+        transform: skew(0deg, 3deg);
+    }
+}
+
+#page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../imgs/back.jpeg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main {
+    // min-height: @main-height;
+    .jumbo {
+        background: rgba(0, 0, 0, 0.3);
+        // padding: 120px 0;
+        display: flex;
+        justify-content: flex-end;
+        // width: 100%;
+
+        .carousel {
+            width: 100%;
+        }
+    }
+}
+
+.about, footer {
+    .reta {
+        background: transparent;
+        height: 115px;
+        position: absolute;
+        left: 0;
+        top: -115px;
+        overflow: hidden;
+        width: 100%;
+        .inclinacao {
+            position: absolute;
+            top: 52px;
+            height: 140px;
+            width: 100%;
+            background: #080031;
+            transform: skew(0deg, 3deg);
+        }
+    }
+}
+
+.about {
+    background-color: @primary;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+
+    .about-txt {
+        width: 60%;
+        padding-bottom: 110px;
+        padding-left: 50px;
+        h2 {
+            font-size: 40px;
+            font-family: 'Kaushan Script', cursive;
+        }
+        p {
+            font-size: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    .about-icons {
+        padding-top: 70px;
+        width: 40%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.about {
+    .main-icon {
+        width: 60%;
+        padding-top: 50px;
+        padding-left: 50px;
+        text-align: center;
+        p {
+            width: 70%;
+            margin: auto;
+        }
+        i {
+            font-size: 100px;
+        }
+        h3 {
+            font-size: 30px;
+        }
+    }
+    .about-labels {
+        padding-bottom: 70px;
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        .label {
+            cursor: pointer;
+            margin: 20px 3%;
+            text-align: center;
+            width: 30%;
+            font-size: 50px;
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.something {
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 50vh;
+
+}
+
+.works {
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 0px 0 110px 0;
+    color: white;
+    h2 {
+        margin: 0;
+        font-size: 60px;
+        color: @primary;
+        padding: 40px;
+        font-family: 'Kaushan Script', cursive;
+    }
+}
+
+
+
+header {
+    height: @header-height;
+    background: @primary;
+}
+
+footer {
+    min-height: @footer-height;
+    background: @primary;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .logo img{
+        width: @header-height;
+    }
+    nav {
+        color: white;
+        overflow: hidden;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+            li {
+                cursor: pointer;
+                padding: 40px 20px;
+                // margin: 0 15px;
+                transition: .5s;
+                text-transform: uppercase;
+
+                &:hover {
+                    background: white;
+                    color: @primary;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}
+
+.fade-in-label {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
