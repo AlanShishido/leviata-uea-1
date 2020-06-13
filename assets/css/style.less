@@ -53,7 +53,7 @@ main {
     }
 }
 
-.about, footer {
+.about, footer, .about2 {
     .reta {
         background: transparent;
         height: 115px;
@@ -107,7 +107,14 @@ main {
     }
 }
 
-.about {
+.about2 {
+    background-color: @primary;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
     .main-icon {
         width: 60%;
         padding-top: 50px;
@@ -125,7 +132,7 @@ main {
         }
     }
     .about-labels {
-        padding-bottom: 70px;
+        padding-top: 70px;
         width: 40%;
         display: flex;
         justify-content: flex-end;
@@ -147,16 +154,85 @@ main {
     }
 }
 
-.something {
+.contato {
     background: rgba(0, 0, 0, 0.3);
     text-align: center;
-    padding: 10px 0;
+    padding-bottom: 110px;
     color: white;
     display: flex;
     align-items: center;
     position: relative;
-    height: 50vh;
+    .title {
+        width: 40%;
+        margin-right: 1%;
+        text-align: center;
+        h2 {
+            font-size: 50px;
+        }
+    }
+    .contact-info {
+        border-right: 1px solid white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        overflow: hidden;
 
+        form {
+            width: 70%;
+            padding-bottom: 35px;
+
+            .form {
+                display: flex; 
+                flex-direction: column;
+
+                p {
+                    font-size: 20px;
+                }
+
+                input, button, textarea {
+                    margin: 5px 0;
+                }
+
+                input, textarea {
+                    outline: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    color: white;
+                    border: 1px solid white;
+                    border-image: none;
+                }
+
+                button {
+                    background-color: transparent;
+                }
+                button:hover {
+                    background-color: @primary;
+                    border: 1px solid @primary;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    color: white;
+    border: 1px solid white;
+    padding: 9px 35px;
+    font-size: 20px;
+    text-decoration-line: none;
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+        &:hover {
+        color: black;
+        background-color: rgb(0,255,0);
+        border-color: rgb(0,255,0);
+        transition: .5s;
+    }
 }
 
 .works {
@@ -184,6 +260,7 @@ footer {
     min-height: @footer-height;
     background: @primary;
     position: relative;
+    color: white;
 }
 
 header {
@@ -232,4 +309,112 @@ header {
     to {
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 1020px){
+
+    .about2 {
+        flex-wrap: wrap;
+        .main-icon {
+            width: 100%;
+            padding-left: 0px;
+            p {
+                width: 80%;
+            }
+        }
+        .about-labels {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .about {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    
+        .about-txt {
+            width: 100%;
+            padding-bottom: 100px;
+            padding-left: 0px;
+        }
+        .about-icons {
+            width: 50%;
+            justify-content: center;
+        }
+    }
+
+    .contato {
+
+        flex-direction: column-reverse;
+
+        padding-bottom: 90px;
+        .title {
+            width: 100%;
+            h2 {
+                margin: 0;
+            }
+        }
+        .contact-info {
+            border-right: 0;
+            width: 100%;
+            form {
+                width: 90%;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 640px){
+
+    .about2 {
+        flex-wrap: wrap;
+        .main-icon {
+            width: 100%;
+            padding-left: 0px;
+            p {
+                width: 80%;
+            }
+        }
+        .about-labels {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .about {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    
+        .about-txt {
+            width: 100%;
+            padding-bottom: 20px;
+            padding-left: 0px;
+        }
+        .about-icons {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .contato {
+
+        flex-direction: column-reverse;
+
+        padding-bottom: 90px;
+        .title {
+            width: 100%;
+            h2 {
+                margin: 0;
+            }
+        }
+        .contact-info {
+            border-right: 0;
+            width: 100%;
+            form {
+                width: 90%;
+            }
+        }
+    }
+  
 }
