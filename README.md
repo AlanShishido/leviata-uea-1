@@ -1,4 +1,4 @@
 # leaviata - UEA
 
 
-![preview](./assets/imgs/teste.png)
+![preview](./assets/imgs/display.png)
